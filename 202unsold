@@ -16,6 +16,32 @@ def header_of_array():
     print("------------------------------------------------------------")
     print("\tX=10\tX=20\tX=30\tX=40\tX=50\tY law")
 
+
+def cal_to_size():
+    while (x <= max_width):
+        result_of_a = 5 * a
+        result_of_b = 5 * b
+        result = a * b - a * y - x * b + x * y 
+        val = result / ((result_of_a - 150) * (result_of_b - 150))
+        marg = marg + val
+        max = 60
+        if (y == max):
+            var_y = 0
+            total = 0.0
+            i = test
+            va = 5
+            while (var_y < va):
+                total = total + my_tab[i]
+                var_y = var_y + 1
+                i = i + 5
+            print("\t%0.3f" %(total), end='')
+            test = test + 1
+            expX.append(total)
+        else:
+            my_tab.append(val)
+            print("\t%0.3f" %(val), end='')
+        x = x + 10
+
 def calc_one(a, b):
     header_of_array()
     y = 10
@@ -27,29 +53,7 @@ def calc_one(a, b):
     while (y <= max_height):
         x = 10
         printer(y)
-        while (x <= max_width):
-            result_of_a = 5 * a
-            result_of_b = 5 * b
-            result = a * b - a * y - x * b + x * y 
-            val = result / ((result_of_a - 150) * (result_of_b - 150))
-            marg = marg + val
-            max = 60
-            if (y == max):
-                var_y = 0
-                total = 0.0
-                i = test
-                va = 5
-                while (var_y < va):
-                    total = total + my_tab[i]
-                    var_y = var_y + 1
-                    i = i + 5
-                print("\t%0.3f" %(total), end='')
-                test = test + 1
-                expX.append(total)
-            else:
-                my_tab.append(val)
-                print("\t%0.3f" %(val), end='')
-            x = x + 10
+        cal_to_size()
         if (y == 60):
             print("\t1")
         else:
