@@ -17,7 +17,7 @@ def header_of_array():
     print("\tX=10\tX=20\tX=30\tX=40\tX=50\tY law")
 
 
-def cal_to_size():
+def cal_to_size(max_width, a, b, y, x, marg, test):
     while (x <= max_width):
         result_of_a = 5 * a
         result_of_b = 5 * b
@@ -41,6 +41,7 @@ def cal_to_size():
             my_tab.append(val)
             print("\t%0.3f" %(val), end='')
         x = x + 10
+    return (y, marg)
 
 def calc_one(a, b):
     header_of_array()
@@ -53,7 +54,7 @@ def calc_one(a, b):
     while (y <= max_height):
         x = 10
         printer(y)
-        cal_to_size()
+        y, marg = cal_to_size(max_width, a, b, y, x, marg, test)
         if (y == 60):
             print("\t1")
         else:
